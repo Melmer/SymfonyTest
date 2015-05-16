@@ -32,6 +32,15 @@ class DemoController extends Controller
     }
 
     /**
+     * @Route("/welcome/{name}", name="_demo_welcome")
+     * @Template()
+     */
+    public function welcomeAction($name)
+    {
+        return array('name' => $name);
+    }
+
+    /**
      * @Route("/contact", name="_demo_contact")
      * @Template()
      */
